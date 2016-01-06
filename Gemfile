@@ -57,8 +57,7 @@ group :development do
 end
 
 # Sufia from local or master
-gem 'sufia', :path => '/home/grosscol/workspace/sufia'
-# gem 'sufia', github: 'projecthydra/sufia', branch: 'master'
+gem 'sufia', github: 'projecthydra/sufia', branch: 'master'
 
 gem 'rsolr', '~> 1.0.6'
 gem 'devise'
