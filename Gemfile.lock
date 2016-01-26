@@ -47,6 +47,7 @@ PATH
       font-awesome-rails (~> 4.2)
       google-api-client (~> 0.7, < 0.9)
       hydra-batch-edit (~> 1.1)
+      hydra-head (< 9.6.0)
       json-schema
       legato (~> 0.3)
       mail_form (~> 1.5)
@@ -638,7 +639,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.2)
-    tinymce-rails (4.3.2)
+    tinymce-rails (4.3.3)
       railties (>= 3.1.1)
     tinymce-rails-imageupload (4.0.16.beta)
       railties (>= 3.2, < 5)
