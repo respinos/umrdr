@@ -5,6 +5,7 @@ Hydra::FileCharacterization::Characterizers::Fits.tool_path = `which fits || whi
 # Given a configuration hash read from a yaml file,
 # build the contents in the repository.
 class BuildContentService
+  VISIBILITY = 'open'
   def self.call( path_to_config )
     config = YAML.load_file(path_to_config)
     base_path = File.dirname(path_to_config)
@@ -63,12 +64,12 @@ class BuildContentService
   # Prepend each value in those with the base path to the config file.
   def do_stupid_prepend!
     #rewrite file paths in works
-    works.each do |w|
+    works && works.each do |w|
       w["files"].map!{|rel_path| File.join(@base_path, rel_path)}
     end
 
     #rewrite file paths in works in collections
-    collections.each do |c|
+    collections && collections.each do |c|
       c['works'] &&  c['works'].each do |w|
           w["files"].map!{|rel_path| File.join(@base_path, rel_path)}
       end
@@ -111,7 +112,7 @@ class BuildContentService
     title = Array(w_hsh['title'])
     desc  = Array(w_hsh['desc'])
     rtype = Array(w_hsh['resource_type'] || 'Dataset')
-    gw = GenericWork.new( title: title, description: desc, resource_type: rtype ) 
+    gw = GenericWork.new( title: title, description: desc, resource_type: rtype, visibility: VISIBILITY ) 
     fsets = w_hsh['files'].map{|p| build_file_set(p)}
     fsets.each{|fs| gw.ordered_members << fs}
     gw.apply_depositor_metadata(user_key)
@@ -122,11 +123,14 @@ class BuildContentService
 
   def build_file_set(path)
     file = File.open(path)
-    fs = FileSet.new()
+    title = Array(File.basename(path))
+    fs = FileSet.new(title: title, visibility: VISIBILITY)
     fs.apply_depositor_metadata(user_key)
     fs.save!
     Hydra::Works::UploadFileToFileSet.call(fs, file)
     Hydra::Works::CharacterizationService.run(fs)
+    fs.date_created = Array(Date.today.iso8601) if fs.date_created.empty?
+    fs.save!
     return fs
   end
 end
