@@ -1,13 +1,15 @@
 development:
   solr_home:        <%= ENV['SOLR_HOME']      || "/quod-dev/idx/h/hydra-solr" %>
   solr_admin_url:   <%= ENV['SOLR_ADMIN_URL'] || "http://localhost:8080/tomcat/quod-dev/solr-hydra/admin" %>
-  solr_core_name:   umrdr
+  solr_core_name:   umrdr-dev
   solr_core_parent: ''
   fedora_url:       localhost:8080/fedora/rest
+  fedora_node_path: umrdr-dev
 
 testing:
   solr_home:        <%= ENV['SOLR_HOME']      || "/quod-dev/idx/h/hydra-solr" %>
   solr_admin_url:   <%= ENV['SOLR_ADMIN_URL'] || "http://localhost:8080/tomcat/quod-dev/solr-hydra/admin" %>
-  solr_core_name:   umrdr
+  solr_core_name:   umrdr-dev
   solr_core_parent: ''
   fedora_url:       localhost:8080/fedora/rest
+  fedora_node_path: umrdr-dev
