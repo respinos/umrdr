@@ -1,5 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  # Allow web console to subnet
+  # config.web_console.whitelisted_ips = '141.211.43.0/24'
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
