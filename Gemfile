@@ -59,7 +59,8 @@ end
 
 # Specific commits of gems.
 
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'master'
+# Temporarily use cc branch until master is fixed
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'rm_hyda-works_rake'
 
 # Required for doing pagination inside an engine. See https://github.com/amatsuda/kaminari/pull/322
 gem 'kaminari', github: 'jcoyne/kaminari', branch: 'sufia'

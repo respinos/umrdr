@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/mlibrary/umichwrapper.git
-  revision: 30104ea95bc20edcf81bedab70ccb621da6d0557
+  revision: 9a0d3b7121dcf11ce0422365782043d735189bc6
   branch: master
   specs:
     umichwrapper (0.2.0)
@@ -20,8 +20,8 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: b7be7bada3b400ec4358f23b7174470b72c90ef1
-  branch: master
+  revision: 57c8149bd660ce5ffcf5ab291c38d1cc4f4fe29b
+  branch: rm_hyda-works_rake
   specs:
     curation_concerns (0.6.0)
       blacklight (~> 6.0)
@@ -38,7 +38,7 @@ GIT
       active_fedora-noid (~> 1.0)
       hydra-collections (~> 7.0)
       hydra-head (~> 9.3)
-      hydra-works (~> 0.6)
+      hydra-works (~> 0.7)
       qa (~> 0.5)
       redlock (~> 0.1.2)
       resque (~> 1.23)
