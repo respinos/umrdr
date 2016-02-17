@@ -1,9 +1,9 @@
 en:
   sufia:
-    product_name:       "Sufia"
-    product_twitter_handle: "@HydraSphere"
-    institution_name:   "Institution Name"
-    institution_name_full: "The Institution Name"
+    product_name:       "Deep Blue Data"
+    product_twitter_handle: "@DeepBlueData"
+    institution_name:   "Michigan"
+    institution_name_full: "University of Michigan"
     sort_label: "Sort the listing of items"
     account_name:       "My Institution Account Id"
     account_label:      "User"
@@ -13,7 +13,7 @@ en:
     deposit_agreement:  "Sufia's Deposit Agreement"
     document_language:  "en"
     upload_tooltip:     "Please accept Deposit Agreement before you can upload."
-    share_button:       "Share Your Work"
+    share_button:       "Deposit Your Work"
     view_profile:       "View Profile"
     edit_profile:       "Edit Profile"
     directory:
