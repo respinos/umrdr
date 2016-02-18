@@ -41,6 +41,7 @@ fcrepo4-data
 
 ## MAC OS
 .DS_Store
+._*
 
 ## TEXTMATE
 *.tmproj
