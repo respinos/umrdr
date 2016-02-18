@@ -1,0 +1,7 @@
+.align-right {
+    text-align: right;
+}
+
+span.required {
+    display: block;
+}
