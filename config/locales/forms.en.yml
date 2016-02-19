@@ -1,0 +1,17 @@
+en:
+  simple_form:
+    metadata_help:
+      generic_work:
+        title_html:
+          '<p>HERE BE HELP TEXT ABOUT TITLES.</p>'
+
+        rights_html:
+          '<p>Maybe a link to the rights because we killed the modal?</p>'
+
+        description_html:
+          '<p>Please keep your description to 300 words or fewer.</p>'
+
+    labels:
+      generic_work:
+        rights: "Creative Commons License"
+
