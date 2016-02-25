@@ -62,6 +62,12 @@ en:
 
         date_created: "Date Created"
 
+        doi: "DOI"
+
+    actions:
+      generic_work:
+        mint_doi: "Mint DOI"
+
     add_remove_labels:
       generic_work:
         contributor: "Contributor"
