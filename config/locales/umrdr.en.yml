@@ -67,6 +67,12 @@ en:
 
         methodology: "Method"
         doi: "DOI"
+        hdl: "Handle"
+
+      collection:
+        rights: "Creative Commons License"
+        tag: "Keywords"
+        subject: "Discipline"
 
     actions:
       generic_work:
@@ -81,3 +87,13 @@ en:
       unprocessable_entity:
         too_large_file: "The file you uploaded is too large."
         
+  blacklight:
+    search:
+      fields:
+        facet:
+          subject_sim: Discipline
+        index:
+          subject_tesim: Discipline
+        show:
+          subject_tesim: Discipline
+          rights: Creative Commons License
