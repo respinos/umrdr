@@ -27,4 +27,8 @@ module SufiaHelper
     link_to(display, link_url)
   end
 
+  def t_url(key, scope)
+    I18n.t(key.gsub('.', '_'), scope)
+  end
+
 end
